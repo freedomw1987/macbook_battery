@@ -1,0 +1,29 @@
+# Build artifacts
+ui/src-tauri/target/
+ui/node_modules/
+ui/dist/
+ui/regression.log
+ui/.vite/
+ui/tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# Generated wrappers (created at install time on the user's machine)
+state
+wrapper-*.log
+*.pid
+
+# OS noise
+.DS_Store
+*.swp
+*.swo
+
+# Editor noise
+.idea/
+.vscode/
+
+# Local build artifacts
+*.dmg
+*.app/
+
+# Local secrets (none for this project but be safe)
+*.secret

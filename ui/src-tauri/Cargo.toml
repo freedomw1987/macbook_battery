@@ -1,0 +1,27 @@
+[package]
+name = "macbook-power-tools"
+version = "1.0.0"
+description = "GUI for macbook_battery charging schedule + power-guard"
+authors = ["David Chu"]
+edition = "2021"
+
+[lib]
+name = "macbook_power_tools_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.0", features = [] }
+tauri-plugin-shell = "2.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = "0.4"
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true
